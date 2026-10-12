@@ -9,10 +9,14 @@ const delayMessage = (ms, message) => {
 };
 
 async function run() {
-    console.log("Starting...");
-    const message = await delayMessage(2000, "You look outstanding!"); - //Waits two seconds.
-    console.log( await delayMessage (5000, "Actually, you do alright.")); - //Waits five sekundes.
-    console.log(message); //Output: Timer Done, here is the returned response! (returns what is resolved in the promise)
+    console.log("Commencing Mission : Rizzler...");
+
+    const message = await delayMessage(1000, "You look outstanding!"); - //Waits two seconds.
+    console.log(message);
+
+    const message2 = await delayMessage(4000, "Actually, you do alright."); - //Waits five sekundes.
+    console.log(message2);
+    // console.log(message); //Output: Timer Done, here is the returned response! (returns what is resolved in the promise)
     console.log("We're done here.")
 } 
 
