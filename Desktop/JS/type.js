@@ -54,6 +54,17 @@ def recurse (x):
 recurse(10)
 // Output will be numbers from 10 to 1 printed in descending order.
 
+
+// Recursion is limited by stack size. 
+const getMaxCallStackSize = () => {
+    try{
+        return getMaxCallStackSize(++i)
+    } catch {
+        return i;
+    }
+};
+
+console.log(getMaxCallStackSize(0));
 // ------------------------------------------------
 // Immediately Invoked Function Expression. (IIFE)
 (function ben () {
@@ -67,3 +78,4 @@ recurse(10)
 ( () => console.log('Hello Corolla'))();
 
 // Declared functions can't be called this way, because IIFE's must be function expressions. 
+
